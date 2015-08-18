@@ -1,14 +1,13 @@
 {
   "family": [
     {
-      "name": "First Last",
-      "age": 4,
-      "gender": "male",
+      "firstname": "Barbara",
+      "lastname": "Boyd",
+      "age": 64,
+      "gender": "female",
       "skills": [
-        "burping",
-        "farting",
-        "inappropriate shouting",
-        "tantrums"
+        "candy crush",
+        "thrifting"
       ]
     }
   ]

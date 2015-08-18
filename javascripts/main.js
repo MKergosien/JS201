@@ -14,20 +14,37 @@ requirejs.config({
 });
 
 requirejs(
-    ["jquery", "hbs", "bootstrap", "addMember", "deleteMember"],
-    function($, Handlebars, bootstrap, addfam, deletefam) {
+    ["jquery", "hbs", "bootstrap", "addMember", "deleteMember", "populateMember"],
+    function($, Handlebars, bootstrap, addfam, deletefam, popfam) {
+      var allFamily;
 
-
-
-
-
-
-
-
+      popfam.queryMember(function(data) {
+        allfamily = data; 
+          
+        require(
+          ['hbs!../templates/family'], 
+          function(fbFamily){
+            $("#familyList").html(fbFamily(data));
+        }); 
+      });  
 
   
+      $("#addMember").click(function(){
+          var newMember = {};
+          addfam.queryNewMember(function(addedMember) {
+            newMember = addedMember;
+
+            newMember.firstname = $("#firstName").val();
+            newMember.lastname = $("#lastname").val();
+            newMember.age = $("#age").val();
+            newMember.gender = $("#gender").val();
+            newMember.skills = $("skills").val();
+            console.log(newMember);
+        });
+      });  
  });   
 
 
-  
-  
+
+
+

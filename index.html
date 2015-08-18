@@ -15,17 +15,46 @@ You can either use AJAX calls to handle all operations, or if you're comfortable
 
   <body>
     <div class="container-fluid">
-      <div class="row row-eq-height">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" >My Crazy Family</a>
+          </div>
+        </div><!-- /.container-fluid -->
+      </nav>
 
-        <div class="col-md-4 left">
-          This is where my add list will be
+      <div class="row row-eq-height">
+        <div class="col-md-4 left form">
+          <form action="#" method="POST" >
+            <label for="firstName"><strong>First Name:</strong></label>
+            <br>
+            <input class="fullwidth" type="text" name="firstName" id="firstname"> 
+            <br><br>  
+            <label for="lastName"><strong>Last Name:</strong></label>
+            <br>
+            <input class="fullwidth" type="text" name="lastName" id="lastname">
+            <br><br>
+            <label for="age"><strong>Age:</strong></label>
+            <br>
+            <input class="fullwidth" type="text" name="age" id="age">
+            <br><br>
+            <label for="sex"><strong>Gender:</strong></label>
+            <br>
+            <input type="radio" name="sex" id="sex" value="male">Male<br>
+            <input type="radio" name="sex" id="sex" value="female">Female
+            <br><br>
+            <label for="skills"><strong>Skills: <br>(Seperate each skill by a comma)</strong></label>
+            <br>
+            <input class="fullwidth" type="text" name="skills" id="skills"> 
+            <br>
+            <br>
+            <button class="fullwidth" id="newMember">Add Member</button>
+          </form>
+                
         </div>
 
-
-
-        <div class="col-md-8 right">
-       This is my family list with a delete button
-  
+        <div class="col-md-8 right form"  id="familyList">  
         </div>
 
       </div>
@@ -34,3 +63,4 @@ You can either use AJAX calls to handle all operations, or if you're comfortable
     <script data-main="javascripts/main"  src="bower_components/requirejs/require.js"></script>
   </body>  
 </html>
+
