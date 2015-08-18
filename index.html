@@ -1,0 +1,36 @@
+<!-- Use the JSON structure shown below when adding a family member. For the skills array, have a <textarea> field in your form where the user can enter in a comma-delimited list of skills that you will convert into an array.
+Use a Handlebars template to create the DOM that lists all family members.
+You can either use AJAX calls to handle all operations, or if you're comfortable with the Firebase native API, you can use that.
+ -->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta charset="utf-8">
+    <title> Family Quiz </title>
+  </head>
+
+
+  <body>
+    <div class="container-fluid">
+      <div class="row row-eq-height">
+
+        <div class="col-md-4 left">
+          This is where my add list will be
+        </div>
+
+
+
+        <div class="col-md-8 right">
+       This is my family list with a delete button
+  
+        </div>
+
+      </div>
+    </div>
+
+    <script data-main="javascripts/main"  src="bower_components/requirejs/require.js"></script>
+  </body>  
+</html>
